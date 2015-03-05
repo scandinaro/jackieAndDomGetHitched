@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jackie McLean & Dom Scandinaro are getting married on January 30th, 2016 in Punta Cana, Dominican Republic.">
+    <meta name="author" content="Dom Scandinaro">
+
+    <title>Jackie & Dom Get Hitched</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" type="image/png" href="img/fav.png"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a data-toggle="modal" data-target="#theCouple" href="#">The Couple</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#photos" href="#">Photos</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#proposal" href="#">Proposal</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#rsvp" href="#">RSVP</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#details" href="#">Wedding Details</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="intro-text">
+            <p>Jackie & Dom</p>
+            <p>Jan. 30th, 2016</p>
+            <p>Punta Cana</p>
+            <img width="60px" src="img/rings.png" />
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div id="theCouple" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">The Couple</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="oswald">Jackie McLean</p>
+                    <img width="50%" src="img/jackie.jpg" />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="oswald">Dom Scandinaro</p>
+                    <img width="50%" src="img/dom.jpg" />
+                    <p>Dom is a software engineer from Pittsburgh, PA.  He is a die hard Steelers, Penguins, and Pirates fan and constantly reminds Jackie how many super bowls the Steelers have won.  Shortly after Jackie moved to Chicago Dom was golfing at the same course he did all summer when he noticed a beautiful new bartender.  When she was taking care of him and a couple of his friends, he asked her to the Rainforest Cafe for a date as part of a bet.  Dom told Jackie that he had a special reserved table near the monkeys and that he was a regular.  Jackie was very intrigued and decided to say yes.  About 30 minutes after their first date ended Dom asked Jackie out on a second date, and the rest was history!</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="photos" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Photos</h4>
+                </div>
+                <div class="modal-body">
+                    <p>The most recent Instagram photos tagged with #JackieAndDomGetHitched will show in the album below.</p>
+                    <div class="instagram">
+                        <img width= "75%" id="instagram-photo" />
+                        <div class="oswald">#JackieAndDomGetHitched</div>
+                        <div class="btn-group">
+                            <button onclick="lastPhoto()" type="button" class="btn btn-default" aria-label="Left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+                            <button onclick="nextPhoto()" type="button" class="btn btn-default" aria-label="Right"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="proposal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Proposal</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="center">
+                        <img width="70%" src="img/map.jpg" />
+                    </div>
+                    <p>On November 7th, 2015 Dom took Jackie for a walk to the bean after work.  Once they arrived he put headphones on her and a special mix of some of their favorite songs began playing.  After listening to music for a few minutes while staring at the bean Dom got down on one knee and popped the question.  Many spectators began yelling and chearing in excitement, and before Dom could even finish asking the question Jackie was already saying YES!  They then spent a private weekend together while only sharing the news with their close friends and family before making it public knowledge the following week.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rsvp" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">RSVP</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Sorry, we are not ready to start accepting RSVPs just yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="details" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Wedding Details</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="center">
+                        <img src="img/dreams.jpg" width="90%"/>
+                    </div>
+                    <p>We have decided on a destination wedding in the Dominican Republic. In February 2015 we traveled to the Dominican to look at resorts and absolutely fell in love with Dreams Punta Cana.</p>
+                    <p>On Saturday, January 30th, 2016 we will be getting married on the beach at <a target="_blank" href="http://www.dreamsresorts.com/punta-cana">Dreams Punta Cana</a>.  The ceremony will be followed by a private reception at a beautiful rooftop venue overlooking the ocean.</p>
+                    <p>We are currently working with a travel agency to get the best rates possible for all of guests.  Please check back shortly for more information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
