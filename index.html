@@ -90,13 +90,16 @@
                     <h4 class="modal-title">The Couple</h4>
                 </div>
                 <div class="modal-body">
-                    <p class="oswald">Jackie McLean</p>
+                    <h1 class="oswald">Jackie McLean</h1>
                     <img alt="Jackie" width="50%" src="img/jackie.jpg" />
                     <p>Jackie is a typical Connecticut girl, who thinks she’s funny even when she’s not, is overly confident in her bartending skills, loves the beach, indulges in seafood any chance she can and of course, has an infatuation with the New York Yankees. Jackie (and Chewbacca) decided to move to Chicago in the summer of 2013 to finally experience the city life she had always wanted. She found a job as a Special Needs Caretaker and developed a great relationship with the children. While the kids kept her busy, she managed to have a second job bartending at the city’s golf course on the lake, where she hoped to meet new friends (and golf for free; as many of you know, Jackie doesn’t like anything unless there is a deal involved!) Luckily for her, on Saturday, September 28th, 2013 a handsome young man walked into her bar and ordered (sorry Dom) a vodka-cranberry, which Jackie immediately made fun of. As their childish bickering continued for hours, Dominic asked Jackie out on a ridiculous date as his friends sat courtside. Jackie chalked this up to be a joke and went on with her day, thinking about the bearded man from Pittsburgh. Surprisingly, Dominic called Jackie the next morning and asked her out on a real date to Bub City. And here we are today.  Currently, she is working at Berkeley Research Group in Chicago, IL as an Expert Talent Acquisition Assistant. She is also starting her Clinic Mental Health Counseling Master’s program at Adler University in September of 2015. Dominic, Jackie and Chewbacca live in a condo in the River North, the heartbeat of downtown Chicago. Together, they enjoy their time going to their local Cross Fit box, attempting to eat paleo and going on random adventures. It is safe to say, they are a perfect match.</p>
-                    <p class="oswald">Dom Scandinaro</p>
+                    <h1 class="oswald">Dom Scandinaro</h1>
                     <img alt="Dom" width="50%" src="img/dom.jpg" />
                     <p>Dom is a software engineer from Pittsburgh, PA.  He is a die hard Steelers, Penguins, and Pirates fan and constantly reminds Jackie how many super bowls the Steelers have won.  Shortly after Jackie moved to Chicago Dom was golfing at the same course he did all summer when he noticed a beautiful new bartender.  When she was taking care of him and a couple of his friends, he asked her to the Rainforest Cafe for a date as part of a bet.  Dom told Jackie that he had a special reserved table near the monkeys and that he was a regular.  Jackie was very intrigued and decided to say yes.  About 30 minutes after their first date ended Dom asked Jackie out on a second date, and the rest was history!</p>
-                 </div>
+                    <div class="clear-pad-15 center">
+                        <a data-toggle="modal" data-dismiss="modal" data-target="#rsvp" href="#">Please click here to RSVP</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -132,9 +135,15 @@
                 </div>
                 <div class="modal-body">
                     <div class="center">
-                        <img alt="Map" width="70%" src="img/map.jpg" />
+                        <img alt="proposal" width="70%" src="img/proposal.jpg" />
                     </div>
                     <p>Weeks prior to the proposal, Dom had an entire day planned for Jackie. He arranged for her to have the day off of work and planned a trip to Disney. Unfortunately, work got in the way and so he had to come up with a new plan. Friday, November 7th, 2014 Dom asked Jackie to meet him in his new office to meet the team. He then took Jackie to South Branch for a quick drink before we started to walk around the city. Once walking for a while, Dominic had said they were going to Jackie's favorite spot, "The Bean" at Millennium Park, seeing she had yet it see it at night.  Once they arrived he put headphones on her and a special mix of some of their favorite songs began playing.  While gazing at the bean and listening to the collection of songs he had created for her, Jackie heard a woman scream at the top of her lungs. Thinking someone was being robbed or murdered, she turned around quickly to find Dominic on one knee and with a box in his hand. Til this day, she is not sure if he even asked the question, but she impatiently said yes.  Spectators began yelling and cheering in excitement. They then spent a private weekend together while only sharing the news with their close friends and family before making it public knowledge the following week. Thankfully, Chewbacca helped with the social media annoucement. </p>
+                    <div class="center">
+                        <img alt="proposal" width="70%" src="img/proposal_chewie.jpg" />
+                    </div>
+                    <div class="clear-pad-15 center">
+                        <a data-toggle="modal" data-dismiss="modal" data-target="#rsvp" href="#">Please click here to RSVP</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,7 +157,48 @@
                     <h4 class="modal-title">RSVP</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Sorry, we are not ready to start accepting RSVPs just yet.</p>
+
+                    <div id="rsvp-success" class="alert alert-success" role="alert">
+                        Thank you! Your RSVP has been transmitted to Jackie & Dom.
+                    </div>
+
+                    <div id="rsvp-error" class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <span id="rsvp-error-text"></span>
+                    </div>
+
+                    <form id="rsvp-form">
+                        <p>We have an initial block of rooms reserved with Apple vacations at the resort, and will have a link available to reserve one within the next few days.  In the mean time we are trying to get a better understanding of who can attend, and how each person plans to book their trip so that we maintain enough rooms in the block for those interested in utilizing the group discount through Apple Vacations.</p>
+                        <p>Please take the time to fill out this information to assist us.</p>
+
+                        <input class="form-control" type="text" id="rsvp-name" placeholder="name" />
+
+                        <div class="clear-pad-15"></div>
+
+                        <select class="form-control" id="rsvp-attendance">
+                            <option value="0">I am planning to...</option>
+                            <option value="1">Happily Accept</option>
+                            <option value="2">Regretfully Decline</option>
+                            <option value="3">Decide in near future</option>
+                        </select>
+
+                        <div class="clear-pad-15"></div>
+
+                        <select class="form-control" id="rsvp-booking">
+                            <option value="0">Booking through...</option>
+                            <option value="1">Apple Vacations</option>
+                            <option value="2">My own travel agent</option>
+                        </select>
+
+                        <div class="clear-pad-15"></div>
+
+                        <div class="right">
+                            <button type="button" id="rsvp-submit" class="btn btn-info">submit</button>
+                        </div>
+
+                        <div class="clear"></div>
+
+                    </form>
                 </div>
             </div>
         </div>
@@ -168,6 +218,9 @@
                     <p>We have decided on a destination wedding in the Dominican Republic. In February 2015 we traveled to the Dominican to look at resorts and absolutely fell in love with Dreams Punta Cana.</p>
                     <p>On Saturday, January 30th, 2016 we will be getting married on the beach at <a target="_blank" href="http://www.dreamsresorts.com/punta-cana">Dreams Punta Cana</a>.  The ceremony will be followed by a private reception at a beautiful rooftop venue overlooking the ocean.</p>
                     <p>We are currently working with a travel agency to get the best rates possible for all of guests.  Please check back shortly for more information.</p>
+                    <div class="clear-pad-15 center">
+                        <a data-toggle="modal" data-dismiss="modal" data-target="#rsvp" href="#">Please click here to RSVP</a>
+                    </div>
                 </div>
             </div>
         </div>
