@@ -26,6 +26,7 @@ $( document ).ready(function() {
             rsvpBookingEnabled = true;
         } else {
             $("#rsvp-booking").hide();
+            rsvpBookingEnabled = false;
         }
     });
 
@@ -53,7 +54,9 @@ function handleRsvpSubmit() {
         $("#rsvp-error").show();
     } else {
         $("#rsvp-form").hide();
-        $("#rsvp-success").show();
+        $.get("data/rsvp.php?name=" + name + "&attendance=" + attendance + "&booking=" + booking, function(data) {
+            $("#rsvp-success").show();
+        });
     }
 }
 

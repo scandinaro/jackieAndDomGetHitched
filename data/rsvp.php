@@ -30,9 +30,9 @@ if ($booking == 1) {
 
 
 $msg = "
-    <p>name: $name</p>
-    <p>attendance: $attendanceString</p>
-    <p>booking: $bookingString</p>
+    Name: $name
+    Attendance: $attendanceString
+    Booking Method: $bookingString
 ";
-
-mail("jaclynmarie.mclean@gmail.com,scandinaro@gmail.com", "Wedding RSVP", $msg);
+$headers = 'From: Jackie And Dom Get Hitched <scandinaro@gmail.com>' . "\r\n";
+mail("jaclynmarie.mclean@gmail.com,scandinaro@gmail.com", "Wedding RSVP", $msg, $headers);
