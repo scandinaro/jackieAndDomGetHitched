@@ -13,7 +13,7 @@ $tag = 'jackieanddomgethitched';
 $limit = 20;
 
 // Get latest photos according to #hashtag keyword
-$media = $instagram->getTagMedia($tag);
+$media = $instagram->getTagMedia($tag, 25);
 
 if (sizeof($media->data) < 10){
     $limit = sizeof($media->data);
