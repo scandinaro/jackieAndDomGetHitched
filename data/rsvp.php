@@ -6,6 +6,9 @@
  * Time: 9:10 PM
  */
 
+require_once '/usr/share/php/aws/credentials.php';
+require 'includes/aws/aws-autoloader.php';
+
 $name = isset($_GET['name']) ? $_GET['name'] : '';
 $attendance = isset($_GET['attendance']) ? $_GET['attendance'] : '';
 $booking = isset($_GET['booking']) ? $_GET['booking'] : '';
@@ -30,9 +33,51 @@ if ($booking == 1) {
 
 
 $msg = "
-    Name: $name
-    Attendance: $attendanceString
-    Booking Method: $bookingString
+    <p>Name: $name</p>
+    <p>Attendance: $attendanceString</p>
+    <p>Booking Method: $bookingString</p>
 ";
-$headers = 'From: Jackie And Dom Get Hitched <scandinaro@gmail.com>' . "\r\n";
-mail("jaclynmarie.mclean@gmail.com,scandinaro@gmail.com", "Wedding RSVP", $msg, $headers);
+
+use Aws\Ses\SesClient;
+
+$client = SesClient::factory(array(
+    'key'    => AWS_KEY,
+    'secret' => AWS_SECRET,
+    'region' => 'us-east-1'
+));
+
+$emailSentId = $client->sendEmail(array(
+    // Source is required
+    'Source' => 'scandinaro@gmail.com',
+    // Destination is required
+    'Destination' => array(
+        'ToAddresses' => array(
+            'scandinaro@gmail.com',
+            'jaclynmarie.mclean@gmail.com'
+        )
+    ),
+    // Message is required
+    'Message' => array(
+        // Subject is required
+        'Subject' => array(
+            // Data is required
+            'Data' => 'Wedding RSVP',
+            'Charset' => 'UTF-8',
+        ),
+        // Body is required
+        'Body' => array(
+            'Text' => array(
+                // Data is required
+                'Data' => strip_tags($msg),
+                'Charset' => 'UTF-8',
+            ),
+            'Html' => array(
+                // Data is required
+                'Data' => $msg,
+                'Charset' => 'UTF-8',
+            ),
+        ),
+    ),
+    'ReplyToAddresses' => array('scandinaro@gmail.com'),
+    'ReturnPath' => 'scandinaro@gmail.com'
+));
