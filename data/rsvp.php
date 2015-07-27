@@ -12,6 +12,7 @@ require 'includes/aws/aws-autoloader.php';
 $name = isset($_GET['name']) ? $_GET['name'] : '';
 $attendance = isset($_GET['attendance']) ? $_GET['attendance'] : '';
 $booking = isset($_GET['booking']) ? $_GET['booking'] : '';
+$song = isset($_GET['song']) ? $_GET['song'] : '';
 
 $attendanceString = "";
 $bookingString = "";
@@ -36,6 +37,7 @@ $msg = "
     <p>Name: $name</p>
     <p>Attendance: $attendanceString</p>
     <p>Booking Method: $bookingString</p>
+    <p>Song: $song</p>
 ";
 
 use Aws\Ses\SesClient;

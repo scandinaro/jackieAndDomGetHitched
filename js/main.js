@@ -23,9 +23,11 @@ $( document ).ready(function() {
     $("#rsvp-attendance").change(function() {
         if ($("#rsvp-attendance").val() == 1) {
             $("#rsvp-booking").show();
+            $("#rsvp-song").show();
             rsvpBookingEnabled = true;
         } else {
             $("#rsvp-booking").hide();
+            $("#rsvp-song").hide();
             rsvpBookingEnabled = false;
         }
     });
@@ -38,6 +40,7 @@ function handleRsvpSubmit() {
     var name = $("#rsvp-name").val();
     var attendance = $("#rsvp-attendance").val();
     var booking = $("#rsvp-booking").val();
+    var song = $("#rsvp-song").val();
     var error = "";
 
     // check for errors
@@ -54,7 +57,7 @@ function handleRsvpSubmit() {
         $("#rsvp-error").show();
     } else {
         $("#rsvp-form").hide();
-        $.get("data/rsvp.php?name=" + name + "&attendance=" + attendance + "&booking=" + booking, function(data) {
+        $.get("data/rsvp.php?name=" + name + "&attendance=" + attendance + "&booking=" + booking + "&song=" + song, function(data) {
             $("#rsvp-success").show();
         });
     }

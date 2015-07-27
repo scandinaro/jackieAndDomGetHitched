@@ -76,6 +76,6 @@ body {
     display: none;
 }
 
-#rsvp-booking {
+#rsvp-booking, #rsvp-song {
     display: none;
 }
