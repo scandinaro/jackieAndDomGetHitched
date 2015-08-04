@@ -14,6 +14,10 @@ body {
     text-align: center;
 }
 
+.larger-font {
+    font-size: 20px;
+}
+
 .right {
     float:right;
 }
@@ -59,7 +63,7 @@ body {
 .navbar-nav {
     font-family: 'Oswald', sans-serif;
     margin: 0px auto;
-    width: 525px;
+    width: 600px;
     float:none;
 }
 
